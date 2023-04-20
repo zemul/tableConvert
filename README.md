@@ -1,4 +1,4 @@
-# HtmlTableConvertMarkdown
+# tableConvert
 Convert HTML Table to Markdown
 
 ### usage
