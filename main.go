@@ -51,7 +51,7 @@ func main() {
 	fmt.Println(md.String())
 	err = clipboard.WriteAll(md.String())
 	if err != nil {
-		panic(err)
+		return
 	}
 	fmt.Println("🍺 write clipboard success")
 }
