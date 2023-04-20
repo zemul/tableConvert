@@ -1,4 +1,4 @@
-module github.com/zemul/HtmlTableConvertMarkdown
+module github.com/zemul/tableConvert
 
 go 1.20
 

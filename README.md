@@ -3,7 +3,7 @@ Convert HTML Table to Markdown
 
 ### usage
 ```
-go install github.com/zemul/HtmlTableConvertMarkdown@latest
+go install github.com/zemul/tableConvert@latest
 
 $ tableConvert                   
 Paste your HTML Table data  here
