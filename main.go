@@ -9,25 +9,23 @@ import (
 	"strings"
 )
 
-var html string
-
 func main() {
 	fmt.Println("Paste your HTML Table data  here ")
+	var md strings.Builder
+	var html strings.Builder
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		input := scanner.Text()
-		html += input
+		html.WriteString(input)
 		if strings.Contains(input, "</table>") {
 			break
 		}
 	}
 
-	doc, err := goquery.NewDocumentFromReader(strings.NewReader(html))
+	doc, err := goquery.NewDocumentFromReader(strings.NewReader(html.String()))
 	if err != nil {
 		panic(err)
 	}
-
-	var md strings.Builder
 
 	doc.Find("thead tr th").Each(func(i int, s *goquery.Selection) {
 		text := s.Text()
